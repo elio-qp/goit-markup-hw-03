@@ -10,28 +10,16 @@
 
 /* General Styles  */
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--Navy-Blue);
   background-color: var(--White);
 }
 
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-p {
-  color: var(--Slate);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-}
-
-button {
+.button {
   cursor: pointer;
 }
 
-h2 {
+.section-title {
   text-align: center;
   font-size: 36px;
   line-height: 1.1;
@@ -40,20 +28,44 @@ h2 {
   text-transform: capitalize;
 }
 
-h3 {
+.list-title {
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
+
+.list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.list-text {
+  color: var(--Slate);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
 /* End Of General Style  */
 
 /* Header Section  */
+.header {
+  width: 1440px;
+  height: 72px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--Cornflower);
+}
+
 .header span {
   color: var(--Iris);
+  width: 44px;
+  height: auto;
 }
 
 a.header-logo {
+  width: 71px;
+  height: auto;
   color: inherit;
   font-family: 'Raleway';
   font-size: 18px;
@@ -62,11 +74,7 @@ a.header-logo {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.header-menu,
-.header-contacts {
-  margin: 0;
+  display: flex;
 }
 
 .menu-link,
@@ -76,66 +84,124 @@ a.header-logo {
   line-height: 1.5;
   letter-spacing: 0.32px;
   text-decoration: none;
+  display: flex;
+}
+
+.menu-link:hover,
+.menu-link:focus,
+.menu-link:active,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active {
+  color: var(--Iris);
 }
 
 .menu-link {
+  width: auto;
+  height: auto;
   font-weight: 500;
   color: inherit;
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--Iris);
-}
-
 .contact-link {
+  height: 24px;
   font-weight: 400;
   color: var(--Slate);
 }
 
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--Iris);
+a[href='mailto:info@devstudio.com'] {
+  width: 153px;
 }
+
+a[href='tel:+110001111111'] {
+  width: 151px;
+}
+
 /* End of Header Section  */
 
 /* Hero Section  */
 .hero {
   background-color: var(--Navy-Blue);
   color: var(--White);
+  width: 1440px;
+  height: 600px;
+  display: inline-block;
 }
 
-.hero-text {
+.hero-title {
   text-align: center;
   font-size: 56px;
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: 1.12px;
+  display: flex;
+  width: 496px;
+  margin: 0px 472px 64px 472px;
 }
 
-.hero > button {
+.hero .button {
   background-color: var(--Iris);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
   color: inherit;
+  font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.64px;
+
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0px 635px 188px 636px;
+  box-sizing: border-box;
 }
 /* End of Hero Section  */
 
 /* Benefits Section  */
-/* styled in general  */
+.list {
+  display: flex;
+}
 /* End of Benefits Section  */
 
 /* What We Do Section  */
-/* styled in general  */
+
 /* End of What We Do Section  */
 
 /* Team Section  */
 .team {
   background-color: var(--Cloud);
+  width: 1440px;
+  height: 732px;
+}
+
+.list-item {
+  width: 264px;
+  margin: 0;
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--White);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.list-image {
+  width: 264px;
+}
+
+.list-item .list-title {
+  margin-top: 32px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.list-image + .list-image {
+  margin-right: 24px;
 }
 /* End of Team Section  */
 
@@ -163,13 +229,15 @@ a.header-logo {
 .footer > p {
   color: var(--Cloud);
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
 }
 /* End of Footer Section  */
 
 /* Portfolio Page  */
 
 /* Buttons Section  */
-.portfolio-buttons > button {
+.portfolio-buttons .button {
   background-color: var(--Cloud);
   border-radius: 4px;
   border: var(--Cornflower);
