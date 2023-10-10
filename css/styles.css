@@ -261,3 +261,12 @@ a[href='tel:+110001111111'] {
   color: var(--White);
 }
 /* End of Buttons Section  */
+
+.portfolio-all .list {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio-all li {
+  width: 30%;
+}
