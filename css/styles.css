@@ -51,7 +51,7 @@ body {
 
 /* Header Section  */
 .header {
-  width: 1440px;
+  width: 1158px;
   height: 72px;
   flex-shrink: 0;
   border-bottom: 1px solid var(--Cornflower);
@@ -169,17 +169,42 @@ a[href='tel:+110001111111'] {
 .list {
   display: flex;
 }
+
+.benefits {
+  width: 1158px;
+  justify-content: center;
+}
+
+.benefits-text {
+  margin-left: 24px;
+}
 /* End of Benefits Section  */
 
 /* What We Do Section  */
+.doing {
+  width: 1140px;
+}
 
+.doing-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
 /* End of What We Do Section  */
 
 /* Team Section  */
 .team {
   background-color: var(--Cloud);
-  width: 1440px;
+  width: 1158px;
   height: 732px;
+}
+
+.team-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .list-item {
@@ -198,11 +223,14 @@ a[href='tel:+110001111111'] {
 
 .list-item .list-title {
   margin-top: 32px;
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
   justify-content: center;
-  align-items: center;
   gap: 32px;
+}
+
+.list-item .list-text {
+  display: flex;
+  justify-content: center;
 }
 
 .list-image + .list-image {
@@ -212,8 +240,12 @@ a[href='tel:+110001111111'] {
 
 /* Footer Section  */
 .footer {
+  width: 1158px;
+  height: 312px;
   background-color: var(--Navy-Blue);
   font-family: inherit;
+  padding-top: 100px;
+  padding-left: 156px;
 }
 
 .footer span {
@@ -242,6 +274,10 @@ a[href='tel:+110001111111'] {
 /* Portfolio Page  */
 
 /* Buttons Section  */
+.portfolio-buttons {
+  width: 1158px;
+}
+
 .portfolio-buttons .button {
   background-color: var(--Cloud);
   border-radius: 4px;
@@ -262,11 +298,22 @@ a[href='tel:+110001111111'] {
 }
 /* End of Buttons Section  */
 
+/* All Section */
+.portfolio-all {
+  width: 140px;
+}
+
 .portfolio-all .list {
+  list-style-type: none;
   flex-wrap: wrap;
   width: 100%;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  justify-content: space-around;
 }
 
 .portfolio-all li {
   width: 30%;
 }
+/*End of All Section */
